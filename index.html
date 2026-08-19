@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="favicon180.png?v=20260818">
+    <link rel="icon" href="favicon.ico?v=20260818" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon.png?v=20260818">
+    <link rel="stylesheet" href="assets/css/rulerpie.css?v=20260818c">
+    <meta name="keywords" content="Ruler, Inch, Inch ruler, English System, Interactive, smart board, promethean, Karl Henselin">
+    <meta name="description" content="RulerPie makes inch rulers easier to understand. It is an interactive ruler that displays as a pie chart and fraction.">
+    <title>RulerPie - Inch ruler to pie chart</title>
+    <script src="assets/script/rulerpie.js?v=20260818c" defer></script>
+  </head>
+  <body>
+    <h1>See the ruler's fractions in pie form!</h1>
+    <div id="ruler-wrap">
+      <img
+        id="ruler"
+        src="assets/img/ruler.png?v=20260818"
+        width="400"
+        height="155"
+        alt="One-inch ruler marked in sixteenths, from 0 on the left to 1 on the right"
+        tabindex="0"
+        role="slider"
+        aria-label="Shaded length on the inch ruler"
+        aria-valuemin="0"
+        aria-valuemax="16"
+        aria-valuenow="1"
+        aria-valuetext="1/16 is shaded."
+        aria-describedby="fraction"
+      >
+      <div id="highlight"></div>
+    </div>
+    <h2 id="fraction" aria-live="polite">1/16 is shaded.</h2>
+    <div id="pie" class="pie" role="img" aria-labelledby="fraction">
+      <img class="pie-photo is-under" src="assets/img/pizza.jpg?v=20260818a" alt="">
+      <img class="pie-photo is-slice" src="assets/img/pizza.jpg?v=20260818a" alt="">
+      <div class="pie-marks" aria-hidden="true"></div>
+    </div>
+    <p class="game">
+      <span class="inlineb">Know it all?</span>
+      <span class="inlineb"><a href="https://rulergame.net" target="_blank" rel="noopener noreferrer">Prove it — score 1000 on this game.</a></span>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+---
+description: Bump cache-bust query strings in index.html when local static assets change
+globs: index.html,assets/**/*,favicon.ico,favicon.png,favicon180.png
+alwaysApply: true
+---
+
+# Cache busting
+
+Local CSS, JS, images, and favicons are loaded with a `?v=` query in `index.html`. Browsers cache those files; a new `v` is what makes visitors see the change.
+
+## When to bump
+
+If you edit or replace any file that `index.html` loads from this repo, set that URL's `?v=` to a new value. Use `YYYYMMDD` (add `a`, `b`, … if the same day already shipped).
+
+Only bump the assets that actually changed. Do not bump on copy-only HTML edits. Do not add `?v=` to external URLs (e.g. rulergame.net).
+
+## Example
+
+```html
+<!-- CSS file changed today -->
+<link rel="stylesheet" href="assets/css/rulerpie.css?v=20260819">
+
+<!-- JS unchanged — leave it -->
+<script src="assets/script/rulerpie.js?v=20260818" defer></script>
+```
+
+New local assets must include `?v=` when added to `index.html`.
